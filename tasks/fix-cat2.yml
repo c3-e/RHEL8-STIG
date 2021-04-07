@@ -1575,7 +1575,7 @@
   tags:
       - RHEL-08-010750
 
-- name: "MEDIUM | REHL-08-010760 | PATCH | All RHEL 8 local interactive user accounts must be assigned a home directory upon creation."
+- name: "MEDIUM | RHEL-08-010760 | PATCH | All RHEL 8 local interactive user accounts must be assigned a home directory upon creation."
   lineinfile:
       path: /etc/login.defs
       regexp: '.*?CREATE_HOME.*'
@@ -1583,7 +1583,7 @@
   when:
       - rhel_08_010760
   tags:
-      - REHL-08-010760
+      - RHEL-08-010760
       - login
       - home
 
