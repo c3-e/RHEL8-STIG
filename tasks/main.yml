@@ -71,3 +71,9 @@
 #   when: rhel8stig_oscap_scan
 #   tags:
 #       - oscapreport
+
+- name: Include missing patches
+  import_tasks: fix-missing.yml
+  when: rhel8stig_missing_patch | bool
+  tags:
+    - missing_patches

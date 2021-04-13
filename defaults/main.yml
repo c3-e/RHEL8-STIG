@@ -711,3 +711,7 @@ rhel8stig_gnutls_encryption: "-VERS-DTLS0.9:-VERS-SSL3.0:-VERS-TLS1.0:-VERS-TLS1
 # RHEL-08-020070
 # This is the value for the tmux lock after setting. To conform to STIG standards value needs to be set to 900 or less
 rhel8stig_tmux_lock_after_time: 900
+
+
+# Patch missing checks
+rhel8stig_missing_patch: true
