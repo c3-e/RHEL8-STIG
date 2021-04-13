@@ -1,9 +1,0 @@
----
-- name: ensure file exists - audit.log
-  copy:
-    content: ""
-    dest: /var/log/audit/audit.log
-    force: no
-    group: root
-    owner: root
-    mode: 0600

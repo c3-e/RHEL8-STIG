@@ -1,0 +1,15 @@
+---
+- name: ensure file exists - audit.log
+  copy:
+    content: ""
+    dest: /var/log/audit/audit.log
+    force: no
+    group: root
+    owner: root
+    mode: 0600
+
+- name: ensure file exists - /etc/audit/audit.rules
+  copy:
+    src: /etc/audit/rules.d/audit.rules
+    dest: /etc/audit/audit.rules
+    remote_src: yes
