@@ -40,6 +40,10 @@
 #   tags:
 #       - oscapreport
 
+- import_tasks: fix-packages.yml
+  tags:
+    - prelim_tasks
+
 - import_tasks: prelim.yml
   become: yes
   tags:

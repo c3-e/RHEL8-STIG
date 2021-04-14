@@ -7,7 +7,7 @@ rhel8stig_cat3_patch: true
 # We've defined complexity-high to mean that we cannot automatically remediate
 # the rule in question.  In the future this might mean that the remediation
 # may fail in some cases.
-rhel8stig_complexity_high: false
+rhel8stig_complexity_high: true
 
 # Show "changed" for complex items not remediated per complexity-high setting
 # to make them stand out.  "changed" items on a second run of the role would
@@ -715,3 +715,10 @@ rhel8stig_tmux_lock_after_time: 900
 
 # Patch missing checks
 rhel8stig_missing_patch: true
+
+rpms:
+  - { name: grub2-tools }
+  - { name: chrony }
+  - { name: sssd }
+  - { name: grubby }
+  - { name: openssh-server }

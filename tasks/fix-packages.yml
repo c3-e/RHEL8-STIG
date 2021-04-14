@@ -1,0 +1,8 @@
+---
+- name: Install RPM packages
+  dnf:
+    name: "{{ item.url | default(item.name) }}"
+    state: "{{ item.state | default(omit) }}"
+    disable_gpg_check: "{{ item.nogpgcheck | default('no') }}"
+  with_items:
+    - "{{ rpms }}"
