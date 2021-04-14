@@ -13,3 +13,9 @@
     src: /etc/audit/rules.d/audit.rules
     dest: /etc/audit/audit.rules
     remote_src: yes
+
+- name: ensure file exists - /etc/sssd/sssd.conf
+  copy:
+    src: /usr/lib64/sssd/conf/sssd.conf
+    dest: /etc/sssd/sssd.conf
+    remote_src: yes
